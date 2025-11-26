@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>JOGA WILL</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<style>
+header {
+  background: #0f1117;
+  border-bottom: 3px solid #00F7FF;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 0 20px #00F7FF55;
+}
+header h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 40px;
+  color: #00F7FF;
+  text-shadow: 0 0 15px #00F7FF, 0 0 30px #007c91;
+  letter-spacing: 3px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+nav ul li a {
+  color: #ffd000;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+nav ul li a:hover {
+  color: #00F7FF;
+  text-shadow: 0 0 12px #00F7FF;
+}
+.container {
+  max-width: 1150px;
+  margin: 40px auto;
+  padding: 20px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+.card {
+  background: #12151c;
+  border: 2px solid #00F7FF33;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 12px #00F7FF33;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px #00F7FFaa;
+}
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.card h3 {
+  color: #ffd000;
+  padding: 10px;
+  text-align: center;
+}
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #0f1117;
+  margin-top: 40px;
+  color: #bbb;
+  border-top: 3px solid #00F7FF;
+}
+
+/* MOBILE COMPACT MODE */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 32px !important;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 8px !important;
+  }
+  .post-container, .container {
+    padding: 10px !important;
+    margin: 10px !important;
+  }
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+  .card {
+    margin-bottom: 15px !important;
+  }
+}
+
+</style>
+</head>
+<body>
+<header>
+  <h1>JOGA WILL</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="CATEGORIAS/jogos-mobile.html">Jogos Mobile</a></li>
+      <li><a href="CATEGORIAS/jogos-pc.html">Jogos PC</a></li>
+      <li><a href="CATEGORIAS/addons-minecraft.html">Addons Minecraft</a></li>
+      <li><a href="CATEGORIAS/produtos.html">Compras / Produtos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+  <h2 style="color:#00F7FF;margin-bottom:15px;">Categorias em Destaque</h2>
+  <div class="grid">
+
+    <div class="card" onclick="location.href='CATEGORIAS/jogos-mobile.html'">
+      <img src="https://i.imgur.com/6fFer1L.jpeg" />
+      <h3>JOGOS MOBILE</h3>
+      <p style="padding: 0 12px 12px; opacity: .85;">Posts atualizados automaticamente.</p>
+    </div>
+
+    <div class="card" onclick="location.href='CATEGORIAS/jogos-pc.html'">
+      <img src="https://i.imgur.com/51D5GXl.jpeg" />
+      <h3>JOGOS PC</h3>
+      <p style="padding: 0 12px 12px; opacity: .85;">Lista de posts de jogos para computador.</p>
+    </div>
+
+    <div class="card" onclick="location.href='CATEGORIAS/addons-minecraft.html'">
+      <img src="https://i.imgur.com/vvhFHgR.jpeg" />
+      <h3>ADDONS MINECRAFT</h3>
+      <p style="padding: 0 12px 12px; opacity: .85;">Addons e conteúdos para Minecraft.</p>
+    </div>
+
+    <div class="card" onclick="location.href='CATEGORIAS/produtos.html'">
+      <img src="https://i.imgur.com/l1Wk8vR.jpeg" />
+      <h3>COMPRAS / PRODUTOS</h3>
+      <p style="padding: 0 12px 12px; opacity: .85;">Recomendações e análises.</p>
+    </div>
+
+  </div>
+</div>
+
+<footer>© 2025 JOGA WILL — Todos os direitos reservados</footer>
+</body>
+</html>
