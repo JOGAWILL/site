@@ -163,7 +163,35 @@ body {
 </style>
 
 <title>Left to Survive - Post</title>
+
+<style>
+@media (max-width: 600px) {
+  header {
+    position: sticky !important;
+    top: 0;
+    z-index: 9999;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+    background:#000 !important;
+  }
+  .post-body, p, div, img, iframe {
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .container, .separator {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  h1, h2, h3, h4 {
+    text-align:center !important;
+  }
+}
+</style>
 </head>
+
 
 <body>
 <header>
