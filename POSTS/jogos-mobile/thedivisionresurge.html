@@ -9,9 +9,45 @@
 
 <style>
 body{ background:#000; color:#fff; font-family:Poppins,sans-serif; margin:0; padding:0; }
+
+/* Cabeçalho Modelo A */
+header {
+  background: #0f1117;
+  border-bottom: 3px solid #00F7FF;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 0 20px #00F7FF55;
+}
+header h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 40px;
+  color: #00F7FF;
+  text-shadow: 0 0 15px #00F7FF, 0 0 30px #007c91;
+  letter-spacing: 3px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+nav ul li a {
+  color: #ffd000;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+nav ul li a:hover {
+  color: #00F7FF;
+  text-shadow: 0 0 12px #00F7FF;
+}
+
+/* Post container */
 .post-wrapper{ max-width:900px; margin:auto; padding:20px; }
 
-/* Imagem e vídeo fluidos */
 .post-wrapper img,
 .post-wrapper iframe {
   max-width:100%;
@@ -20,7 +56,6 @@ body{ background:#000; color:#fff; font-family:Poppins,sans-serif; margin:0; pad
   margin:auto;
 }
 
-/* Desktop: reduzir tudo */
 @media (min-width:900px){
   .post-wrapper img { max-width:45%; }
   .post-wrapper iframe { max-width:45%; height:220px; }
@@ -46,6 +81,19 @@ body{ background:#000; color:#fff; font-family:Poppins,sans-serif; margin:0; pad
 
 </head>
 <body>
+
+<header>
+  <h1>JOGA WILL</h1>
+  <nav>
+    <ul>
+      <li><a href="../../index.html">Início</a></li>
+      <li><a href="../../CATEGORIAS/jogos-mobile.html">Jogos Mobile</a></li>
+      <li><a href="../../CATEGORIAS/jogos-pc.html">Jogos PC</a></li>
+      <li><a href="../../CATEGORIAS/addons-minecraft.html">Addons Minecraft</a></li>
+      <li><a href="../../CATEGORIAS/produtos.html">Compras / Produtos</a></li>
+    </ul>
+  </nav>
+</header>
 
 <div class="post-wrapper">
 
