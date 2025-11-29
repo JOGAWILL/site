@@ -1,1 +1,1 @@
-async function carregarPosts("POSTS", "lista-posts")}
+async function carregarPosts("POSTS", "lista-posts");
