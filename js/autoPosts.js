@@ -1,1 +1,1 @@
-async function carregarPosts(pasta, containerId){ /* simplified */ }
+async function carregarPosts(POSTS){ /* simplified */ }
