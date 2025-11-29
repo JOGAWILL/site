@@ -1,0 +1,1 @@
+async function carregarPosts(pasta, containerId){ /* simplified */ }
