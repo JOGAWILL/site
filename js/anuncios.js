@@ -1,79 +1,59 @@
+/* ===========================================================
+   AUTO LIST POSTS – SISTEMA AUTOMÁTICO PARA TODAS CATEGORIAS
+   Desenvolvido especialmente para github.com/JOGAWILL/site
+   =========================================================== */
 
-/* ========== ADSTERRA GLOBAL AD FILE ========== */
-/* This script injects all your Adsterra ads automatically */
+async function loadPostsAuto(folderPath) {
+    const container = document.getElementById("lista");
+    container.innerHTML = "<p style='color:white'>Carregando posts...</p>";
 
-/* Helper to write blocks safely */
-function inject(html) {
-    document.write(html);
+    // API pública do GitHub
+    const apiURL = `https://api.github.com/repos/JOGAWILL/site/contents/${folderPath}`;
+
+    try {
+        const res = await fetch(apiURL);
+        const files = await res.json();
+
+        // Filtra somente HTML
+        let htmlFiles = files.filter(f => f.name.endsWith(".html"));
+
+        let posts = [];
+
+        for (let file of htmlFiles) {
+            const rawURL = file.download_url;
+
+            // lê o conteúdo do post
+            const html = await fetch(rawURL).then(r => r.text());
+
+            // pega <title>
+            let title = html.match(/<title>(.*?)<\/title>/i);
+            title = title ? title[1] : file.name.replace(".html", "");
+
+            // salva
+            posts.push({
+                title: title,
+                url: `../${folderPath}/${file.name}`
+            });
+        }
+
+        // Ordena — mais novos primeiro
+        posts.reverse();
+
+        // Renderiza
+        container.innerHTML = "";
+        posts.forEach(p => {
+            const div = document.createElement("div");
+            div.classList.add("card");
+            div.innerHTML = `
+                <a href="${p.url}" style="text-decoration:none;color:#fff;">
+                    <h3>${p.title}</h3>
+                </a>
+            `;
+            container.appendChild(div);
+        });
+
+    } catch (err) {
+        container.innerHTML = `<p style="color:red;">Erro ao carregar posts.</p>`;
+        console.error(err);
+    }
 }
-
-/* ---------------- TOP BANNER 728x90 ---------------- */
-inject(`
-<div style="text-align:center; margin:20px auto;">
-<script type="text/javascript">
-    atOptions = {
-        'key' : 'd7f9fd9b65051082e170401380571aac',
-        'format' : 'iframe',
-        'height' : 90,
-        'width' : 728,
-        'params' : {}
-    };
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/d7f9fd9b65051082e170401380571aac/invoke.js"></script>
-</div>
-`);
-
-/* ---------------- BANNER 468x60 (before content) ---------------- */
-inject(`
-<div style="text-align:center; margin:20px auto;">
-<script type="text/javascript">
-    atOptions = {
-        'key' : '1e344a3fdf1d83a265d8b241043e31d2',
-        'format' : 'iframe',
-        'height' : 60,
-        'width' : 468,
-        'params' : {}
-    };
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/1e344a3fdf1d83a265d8b241043e31d2/invoke.js"></script>
-</div>
-`);
-
-/* ---------------- POPUNDER ---------------- */
-inject(`
-<script type='text/javascript' src='//pl28129076.effectivegatecpm.com/e5/1c/eb/e51cebe6f8dee8c5f2b89912fd8dbb41.js'></script>
-`);
-
-/* ---------------- SOCIAL BAR ---------------- */
-inject(`
-<script type='text/javascript' src='//pl28142518.effectivegatecpm.com/6b/31/b1/6b31b1db2012ec28789a2d51ce932ec9.js'></script>
-`);
-
-/* ---------------- SMARTLINK ---------------- */
-inject(`
-<a href="https://www.effectivegatecpm.com/dqmnuhnn9?key=81e1f14bf425238d457a3c71b95d7f21" style="display:none;"></a>
-`);
-
-/* ---------------- NATIVE BANNER (middle) ---------------- */
-inject(`
-<div style="text-align:center; margin:25px 0;">
-<script async="async" data-cfasync="false" src="//pl28152870.effectivegatecpm.com/5811c7abb70e6b21727831675f614a3c/invoke.js"></script>
-<div id="container-5811c7abb70e6b21727831675f614a3c"></div>
-</div>
-`);
-
-/* ---------------- FINAL 320x50 ---------------- */
-inject(`
-<div style="text-align:center; margin:20px auto;">
-<script type="text/javascript">
-    atOptions = {
-        'key' : '52634881ed357d23ec22fa9cce51fa95',
-        'format' : 'iframe',
-        'height' : 50,
-        'width' : 320,
-        'params' : {}
-    };
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/52634881ed357d23ec22fa9cce51fa95/invoke.js"></script>
-</div>
-`);
