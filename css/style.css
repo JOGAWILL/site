@@ -1,0 +1,18 @@
+
+/* style.css gerado automaticamente */
+:root{ --bg:#0f1117; --card:#12151c; --accent:#00eaff; --gold:#ffd000; --text:#ddd; }
+*{box-sizing:border-box}
+body{background:var(--bg); color:var(--text); font-family: Poppins, Arial, sans-serif; margin:0}
+header{background:var(--bg); padding:18px; text-align:center; border-bottom:3px solid var(--accent)}
+header h1{color:var(--accent); font-family:Orbitron, sans-serif; margin:0}
+nav ul{list-style:none; display:flex; gap:18px; justify-content:center; padding:8px 0; margin:0}
+nav a{color:var(--gold); text-decoration:none; font-weight:700}
+.container{max-width:1150px; margin:30px auto; padding:16px}
+.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px}
+.card{background:var(--card); border:2px solid rgba(0,234,255,0.15); padding:10px; border-radius:10px; cursor:pointer; transition:0.2s}
+.card:hover{transform:translateY(-6px)}
+.card img{width:100%; height:140px; object-fit:cover; border-radius:6px}
+.card h3{color:var(--gold); margin:8px 0 4px}
+.meta{opacity:0.8; font-size:0.9rem}
+footer{text-align:center;padding:20px;color:#999;border-top:3px solid var(--accent); margin-top:30px}
+@media (max-width:600px){ .grid{grid-template-columns:1fr} nav ul{flex-direction:column} }
