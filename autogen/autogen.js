@@ -1,7 +1,7 @@
 /* AutoGen client-side script (see README for instructions) */
 const CONFIG = {
-  owner: "YOUR_GITHUB_USERNAME",
-  repo: "YOUR_REPO_NAME",
+  owner: "JOGAWILL",
+  repo: "site",
   branch: "main",
   perCategoryLimit: 200,
   useCommitsForDate: true,
