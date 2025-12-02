@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<div class="container">
+
+  {{ range .Paginator.Pages }}
+  <div class="post">
+    <img src="{{ .Params.thumbnail }}" alt="{{ .Title }}">
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+  </div>
+  {{ end }}
+
+</div>
+
+<div class="pagination">
+  {{ template "_internal/pagination.html" . }}
+</div>
+
+{{ end }}

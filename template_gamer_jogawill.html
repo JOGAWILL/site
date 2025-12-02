@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JOGA WILL - Gamer</title>
+
+  <!-- ESTILO GERAL GAMER -->
+  <style>
+    body {
+      background: #0a0a0a;
+      color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Cabeçalho com neon azul cyano */
+    header {
+      width: 100%;
+      padding: 25px 0;
+      text-align: center;
+      background: #000000;
+      border-bottom: 2px solid #0ff;
+      box-shadow: 0 0 15px #0ff;
+    }
+
+    .logo-neon {
+      font-size: 42px;
+      font-weight: 800;
+      color: #0ff;
+      text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 35px #09f;
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 3px;
+    }
+
+    /* Menu de categorias */
+    nav {
+      width: 100%;
+      background: #111;
+      border-bottom: 1px solid #0ff5;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #0ff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: white;
+      text-shadow: 0 0 10px #0ff;
+    }
+
+    /* Container dos posts */
+    .container {
+      width: 95%;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+
+    .post {
+      background: #111;
+      border: 1px solid #0ff3;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      box-shadow: 0 0 8px #0ff3;
+    }
+
+    .post img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .post h2 {
+      margin: 10px 0;
+      color: #0ff;
+      text-shadow: 0 0 8px #0ff;
+    }
+
+    /* Paginação */
+    .pagination {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .pagination a {
+      display: inline-block;
+      padding: 10px 15px;
+      margin: 5px;
+      background: #0ff2;
+      border: 1px solid #0ff;
+      color: #0ff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    .pagination a:hover {
+      background: #0ff;
+      color: #000;
+    }
+
+    /* Anúncio global */
+    .ad-global {
+      width: 100%;
+      text-align: center;
+      margin: 25px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- CABEÇALHO PRINCIPAL -->
+  <header>
+    <div class="logo-neon">JOGA WILL</div>
+  </header>
+
+  <!-- MENU DE CATEGORIAS -->
+  <nav>
+    <a href="/jogos-mobile/">JOGOS MOBILE</a>
+    <a href="/jogos-pc/">JOGOS PC</a>
+    <a href="/addons-minecraft/">ADDONS MINECRAFT</a>
+    <a href="/analise-especial/">ANÁLISE / ESPECIAL</a>
+    <a href="/compras-produtos/">COMPRAS / PRODUTOS</a>
+  </nav>
+
+  <!-- ANÚNCIO GLOBAL (Adsterra) -->
+  <div class="ad-global">
+    <!-- Cole aqui o seu script Adsterra -->
+    <script type="text/javascript">
+      atOptions = {
+        'key': 'SEU_KEY_AQUI',
+        'format': 'iframe',
+        'height': 50,
+        'width': 320,
+        'params': {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/SEU_SCRIPT.js"></script>
+  </div>
+
+  <!-- LISTA DE POSTS (Modelo base) -->
+  <div class="container">
+
+    <div class="post">
+      <img src="https://via.placeholder.com/800x400" alt="thumb" />
+      <h2>Título do Post Exemplo</h2>
+      <p>Descrição curta do post. Esse texto será gerado automaticamente pelo template do Hugo/Jekyll.</p>
+    </div>
+
+    <div class="post">
+      <img src="https://via.placeholder.com/800x400" alt="thumb" />
+      <h2>Outro Post Exemplo</h2>
+      <p>Texto automático do post.</p>
+    </div>
+
+  </div>
+
+  <!-- PAGINAÇÃO -->
+  <div class="pagination">
+    <a href="#">« Anterior</a>
+    <a href="#">Próxima »</a>
+  </div>
+
+</body>
+</html>

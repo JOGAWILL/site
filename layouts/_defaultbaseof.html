@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ .Title }} - JOGA WILL</title>
+
+  <style>
+    body {
+      background: #0a0a0a;
+      color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      width: 100%;
+      padding: 25px 0;
+      text-align: center;
+      background: #000;
+      border-bottom: 2px solid #0ff;
+      box-shadow: 0 0 15px #0ff;
+    }
+
+    .logo-neon {
+      font-size: 42px;
+      font-weight: 800;
+      color: #0ff;
+      text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 35px #09f;
+      letter-spacing: 3px;
+    }
+
+    nav {
+      width: 100%;
+      background: #111;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid #0ff5;
+    }
+
+    nav a {
+      color: #0ff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-shadow: 0 0 10px #0ff;
+    }
+
+    .container {
+      width: 95%;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+
+    .post {
+      background: #111;
+      padding: 15px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      border: 1px solid #0ff3;
+      box-shadow: 0 0 10px #0ff3;
+    }
+
+    .post img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .post h2 a {
+      text-decoration: none;
+      color: #0ff;
+      text-shadow: 0 0 10px #0ff;
+    }
+
+    .pagination {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .pagination a {
+      padding: 10px;
+      margin: 5px;
+      background: #0ff3;
+      border: 1px solid #0ff;
+      color: #0ff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo-neon">JOGA WILL</div>
+</header>
+
+<nav>
+  <a href="/jogos-mobile/">JOGOS MOBILE</a>
+  <a href="/jogos-pc/">JOGOS PC</a>
+  <a href="/addons-minecraft/">ADDONS MINECRAFT</a>
+  <a href="/analise-especial/">ANÁLISE / ESPECIAL</a>
+  <a href="/compras-produtos/">COMPRAS / PRODUTOS</a>
+</nav>
+
+<div class="ad-global" style="text-align:center; margin:25px 0;">
+  <!-- Seu Adsterra -->
+  <script type="text/javascript">
+    atOptions = {
+      'key': 'SEUKEY',
+      'format': 'iframe',
+      'height': 50,
+      'width': 320,
+      'params': {}
+    };
+  </script>
+  <script src="//www.highperformanceformat.com/SEUSCRIPT.js"></script>
+</div>
+
+<main>
+  {{ block "main" . }}{{ end }}
+</main>
+
+</body>
+</html>
