@@ -6,7 +6,7 @@ const CONFIG = {
   perCategoryLimit: 200,
   useCommitsForDate: true,
   categories: [
-    { name: "jogos-mobile", path: "site/POSTS/jogos-mobile", container: "#jogos-mobile-list" },
+    { name: "jogos-mobile", path: "POSTS/jogos-mobile", container: "#jogos-mobile-list" },
     { name: "jogos-pc", path: "site/POSTS/jogos-pc", container: "#jogos-pc-list" },
     { name: "addons-minecraft", path: "site/POSTS/addons-minecraft", container: "#addons-minecraft-list" },
     { name: "produtos-compras", path: "site/POSTS/produtos-compras", container: "#produtos-compras-list" }
