@@ -1,19 +1,55 @@
-<!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Jogos Mobile</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="../css/style.css">
+
 <style>
+header {
+  background: #0f1117;
+  border-bottom: 3px solid #00F7FF;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 0 20px #00F7FF55;
+}
+header h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 40px;
+  color: #00F7FF;
+  text-shadow: 0 0 15px #00F7FF, 0 0 30px #007c91;
+  letter-spacing: 3px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+nav ul li a {
+  color: #ffd000;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+nav ul li a:hover {
+  color: #00F7FF;
+  text-shadow: 0 0 12px #00F7FF;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
 .autogen-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
-  padding: 20px;
 }
+
 .autogen-card {
   background: #12151c;
   border: 2px solid #00F7FF33;
@@ -21,6 +57,7 @@
   overflow: hidden;
   box-shadow: 0 0 12px #00F7FF33;
   transition: 0.3s;
+  cursor: pointer;
 }
 .autogen-card:hover {
   transform: scale(1.03);
@@ -35,6 +72,15 @@
   color: #ffd000;
   padding: 10px;
   text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #0f1117;
+  margin-top: 40px;
+  color: #bbb;
+  border-top: 3px solid #00F7FF;
 }
 </style>
 </head>
@@ -54,13 +100,32 @@
   </nav>
 </header>
 
-<h1 class="categoria-titulo">Jogos Mobile</h1>
+<h1 style="
+  background:url('../IMAGENS/jogosmobile-bg.jpg');
+  background-size:cover;
+  background-position:center;
+  padding:45px 0;
+  border-radius:12px;
+  color:#ffd000;
+  text-shadow: 0 0 15px #000;
+  font-family:'Orbitron', sans-serif;
+  font-size:38px;
+  text-align:center;
+  margin:25px auto;
+  box-shadow:0 0 20px #00F7FF55;
+">
+  Jogos Mobile
+</h1>
 
-<!-- AQUI O SCRIPT AUTOMÁTICO VAI INSERIR OS POSTS -->
-<div id="jogos-mobile-list"></div>
+<div class="container">
+    <!-- AQUI O AUTOGEN VAI CRIAR TUDO -->
+    <div id="jogos-mobile-list"></div>
+</div>
 
-<script src="../js/autogen-client.js" type="module"></script>
+<!-- SCRIPT NOVO (AutoGen) -->
+<script type="module" src="../autogen/autogen.js"></script>
 
 <footer>© 2025 JOGA WILL — Todos os direitos reservados</footer>
+
 </body>
 </html>
