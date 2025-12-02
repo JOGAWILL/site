@@ -1,1 +1,14 @@
+name: Autogen JSON build
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '0 */6 * * *'
+jobs:
+  build_json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate placeholder (customize .github/autogen/generate.js)
+        run: echo "Configure .github/autogen/generate.js for your repo"
 
