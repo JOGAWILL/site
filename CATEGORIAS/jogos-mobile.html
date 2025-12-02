@@ -1,6 +1,8 @@
 <html><head>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<style>header {
+<style>
+/* SEU CSS (mantido igual) */
+header {
   background: #0f1117;
   border-bottom: 3px solid #00F7FF;
   padding: 20px 0;
@@ -75,7 +77,7 @@ footer {
   border-top: 3px solid #00F7FF;
 }
 
-/* MOBILE FIX — COMPACT */
+/* Compacto no Mobile */
 @media (max-width: 600px) {
   header h1 {
     font-size: 32px !important;
@@ -84,20 +86,20 @@ footer {
     flex-direction: column;
     gap: 10px !important;
   }
-  img {
-    max-width: 100% !important;
-    height: auto !important;
-  }
   .grid {
     grid-template-columns: 1fr !important;
   }
 }
 </style>
-<link rel="stylesheet" href="../css/style.css"></head>
+
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
 <body>
+
 <header>
   <h1>JOGA WILL</h1>
-<div id="posts-container"></div>
+
   <nav>
     <ul>
       <li><a href="../index.html">Início</a></li>
@@ -108,10 +110,31 @@ footer {
     </ul>
   </nav>
 </header>
-<h1 style="     background:url('../IMAGENS/jogosmobile-bg.jpg');     background-size:cover;     background-position:center;     padding:45px 0;     border-radius:12px;     color:#ffd000;     text-shadow: 0 0 15px #000;     font-family:'Orbitron', sans-serif;     font-size:38px;     text-align:center;     margin:25px auto;     box-shadow:0 0 20px #00F7FF55; ">   Jogos Mobile </h1>
-<div id="posts-container"></div>
-<div id="lista"></div>
-<script src="../js/list-posts.js"></script>
-<script>loadPosts("../DATA/jogos-mobile.json")</script>
+
+<h1 style="
+    background:url('../IMAGENS/jogosmobile-bg.jpg');
+    background-size:cover;
+    background-position:center;
+    padding:45px 0;
+    border-radius:12px;
+    color:#ffd000;
+    text-shadow:0 0 15px #000;
+    font-family:'Orbitron', sans-serif;
+    font-size:38px;
+    text-align:center;
+    margin:25px auto;
+    box-shadow:0 0 20px #00F7FF55;
+">
+   Jogos Mobile
+</h1>
+
+<!-- AQUI O AUTOGEN IRÁ INSERIR OS POSTS -->
+<div id="jogos-mobile-list"></div>
+
+<!-- ATIVA O GERADOR AUTOMÁTICO -->
+<script type="module" src="/autogen/autogen.js"></script>
+
 <footer>© 2025 JOGA WILL — Todos os direitos reservados</footer>
-</body></html>
+
+</body>
+</html>
